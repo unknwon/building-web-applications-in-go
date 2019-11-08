@@ -6,6 +6,10 @@
 
 请到 [Go 语言中文网](https://studygolang.com/subject/479) 参与交流讨论。
 
+### 关注公众号第一时间获取更新
+
+![](images/qrcode.jpg)
+
 ## 教程大纲
 
 [开篇词：知其然知其所以然，以理解为驱动的学习](articles/00.md)
