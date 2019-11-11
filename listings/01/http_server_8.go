@@ -17,7 +17,6 @@ func main() {
 		Handler: mux,
 	}
 
-	// 创建系统信号接收器
 	quit := make(chan os.Signal)
 	signal.Notify(quit, os.Interrupt)
 	go func() {
