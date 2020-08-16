@@ -31,9 +31,6 @@ Quantity: {{.Quantity}}
 Subtotal: {{.Subtotal}}
 `)
 
-		// 获取 URL 参数的值
-		val := r.URL.Query().Get("val")
-
 		// 根据 URL 查询参数的值创建 Inventory 实例
 		inventory := &Inventory{
 			SKU:  r.URL.Query().Get("sku"),
@@ -45,7 +42,7 @@ Subtotal: {{.Subtotal}}
 		inventory.Quantity, _ = strconv.ParseInt(r.URL.Query().Get("quantity"), 10, 64)
 
 		// 调用模板对象的渲染方法
-		err = tmpl.Execute(w, val)
+		err = tmpl.Execute(w, inventory)
 		if err != nil {
 			fmt.Fprintf(w, "Execute: %v", err)
 			return
